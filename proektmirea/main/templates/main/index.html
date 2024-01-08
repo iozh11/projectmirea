@@ -8,6 +8,7 @@
 <body>
 <img src = "image/main_photo.jpg" width="100%" height = "300">
 <div class="navbar">
+  {% block content %}
     <a href="index.html">Главная</a>
   <div class="dropdown">
     <button class="dropbtn"> Книги 
@@ -19,9 +20,16 @@
       <a href="ilych_lenin.html">Ильич Ленин</a>
     </div>
   </div> 
-    <a style = "float: right" href="#" class="right">Войти</a>
+    <a style = "float: right" href="#" class="right">Войти</a> 
+    {% endblock %}
 </div>
-<h1 class="line">Главная</h1>
+
+
+
+
+<h1 class="line">{% block title %}Главная{% endblock %}</h1>
+
+
 
 <div class = 'splitt'>
   <img src="image/14_original.jpeg">
@@ -45,5 +53,6 @@
 <footer>
   <p>Создано командой Gref</p>
 </footer>
+
 </body>
 </html>

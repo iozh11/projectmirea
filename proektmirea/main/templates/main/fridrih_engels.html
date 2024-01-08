@@ -1,3 +1,4 @@
+{% extends 'main/index.html' %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,7 +20,7 @@
       </div> 
         <a style = "float: right" href="#" class="right">Войти</a>
     </div>
-    <h1 class = "line">Фридрих Энгельс</h1>
+    {% block title %}Фридрих Энгельс{% endblock %}
     <div class = "maintext"><img src="image/engels.jpg" class="leftimg">
       Немецкий философ, политический теоретик.
       Энгельс был ключевой фигурой в развитии социализма и коммунизма. 

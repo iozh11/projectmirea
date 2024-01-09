@@ -1,26 +1,7 @@
 {% extends 'main/index.html' %}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/main_styles.css">
-        </head>
-<body>
-    <div class="navbar">
-        <a href="index.html">Главная</a>
-      <div class="dropdown">
-        <button class="dropbtn"> Книги 
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="karl_marks.html">Карл Маркс</a>
-          <a href="fridrih_engels.html">Фридрих Энгельс</a>
-          <a href="ilych_lenin.html">Ильич Ленин</a>
-        </div>
-      </div> 
-        <a style = "float: right" href="#" class="right">Войти</a>
-    </div>
+  {% block img %}{% endblock %}
     {% block title %}Фридрих Энгельс{% endblock %}
+    {% block content %}
     <div class = "maintext"><img src="image/engels.jpg" class="leftimg">
       Немецкий философ, политический теоретик.
       Энгельс был ключевой фигурой в развитии социализма и коммунизма. 
@@ -36,5 +17,4 @@
     <ul class="list2b">
       <li><a href="book_development_socialism_from_utopia_to_science.html">"Развитие социализма от утопии к науке"</a></li>
     </ul>
-</body>
-</html>
+{% endblock %}

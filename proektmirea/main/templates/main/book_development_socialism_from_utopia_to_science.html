@@ -6,19 +6,21 @@
         </head>
 <body>
     <div class="navbar">
-        <a href="index.html">Главная</a>
-      <div class="dropdown">
-        <button class="dropbtn"> Книги 
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="karl_marks.html">Карл Маркс</a>
-          <a href="fridrih_engels.html">Фридрих Энгельс</a>
-          <a href="ilych_lenin.html">Ильич Ленин</a>
-        </div>
-      </div> 
-        <a style = "float: right" href="#" class="right">Войти</a>
-    </div>
+        {% block content %}
+          <a href="{% url 'home' %}">Главная</a>
+        <div class="dropdown">
+          <button class="dropbtn"> Книги 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="{% url 'k_mar' %}">Карл Маркс</a>
+            <a href="{% url 'f_eng' %}">Фридрих Энгельс</a>
+            <a href="{% url 'i_len' %}">Ильич Ленин</a>
+          </div>
+        </div> 
+          <a style = "float: right" href="#" class="right">Войти</a> 
+          {% endblock %}
+      </div>
     {% block title %}Развитие социализма от утопии к науке{% endblock %}
  <div class = "maintext"><p class="headingmaintext">
     К. Маркс Введение к французскому изданию брошюры Ф. Энгельса
@@ -354,6 +356,8 @@
 
 <div class="maintext">
     Совершить этот освобождающий мир подвиг - таково историческое призвание современного пролетариата. Исследовать исторические условия, а вместе с тем и самоё природу этого переворота и таким образом выяснить ныне угнетённому классу, призванному совершить этот подвиг, условия и природу его собственного дела - такова задача научного социализма, являющегося теоретическим выражением пролетарского движения. </div><br><br>
- 
+    <footer>
+        <p>Создано командой Gref</p>
+      </footer>
 </body>
 </html>

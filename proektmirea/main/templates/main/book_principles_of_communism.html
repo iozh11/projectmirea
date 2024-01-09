@@ -6,19 +6,21 @@
 </head>
 <body> 
   <div class="navbar">
-    <a href="index.html">Главная</a>
-  <div class="dropdown">
-    <button class="dropbtn"> Книги 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="karl_marks.html">Карл Маркс</a>
-      <a href="fridrih_engels.html">Фридрих Энгельс</a>
-      <a href="ilych_lenin.html">Ильич Ленин</a>
-    </div>
-  </div> 
-    <a style = "float: right" href="#" class="right">Войти</a>
-</div>
+    {% block content %}
+      <a href="{% url 'home' %}">Главная</a>
+    <div class="dropdown">
+      <button class="dropbtn"> Книги 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="{% url 'k_mar' %}">Карл Маркс</a>
+        <a href="{% url 'f_eng' %}">Фридрих Энгельс</a>
+        <a href="{% url 'i_len' %}">Ильич Ленин</a>
+      </div>
+    </div> 
+      <a style = "float: right" href="#" class="right">Войти</a> 
+      {% endblock %}
+  </div>
     {% block title %}Принципы коммунизма{% endblock %}
         <div class = "maintext">
           <p class = "headingmaintext"><strong>1-й вопрос: </strong>Что такое коммунизм?<br></p>
@@ -692,5 +694,8 @@
           для борьбы между буржуа и пролетариями. С этого дня партийная политика 
           коммунистов будет здесь такой же, как и в странах, где буржуазия уже 
           господствует. </div><br>
+          <footer>
+            <p>Создано командой Gref</p>
+          </footer>
 </body>
 </html>

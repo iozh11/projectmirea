@@ -1,8 +1,9 @@
 {% extends 'main/index.html' %}
+{% load static %}
   {% block img %}{% endblock %}
     {% block title %}Владимир Ильич Ленин{% endblock %}
     {% block content %}
-    <div class = "maintext"><img src="image/lenin.jpg" class="leftimg">
+    <div class = "maintext"><img src="{% static 'main/img/lenin.jpg' %}" class="leftimg">
       Марксист, создатель Третьего интернационала, 
       Ленин сыграл ведущую роль в большевистской революции 1917 года, 
       которая свергла Российскую империю и основала Советский Союз.<br><br>
@@ -15,6 +16,6 @@
     </div>
     <h1 class="works">Основные сочинения</h1>
     <ul class="list2b">
-      <li><a href="book_where_to_begin.html">"Что делать?"</a></li>
+      <li><a href="{%url 'books_ily_l'%}">"Что делать?"</a></li>
     </ul>
-{% endblock %}
+    {% endblock content %}

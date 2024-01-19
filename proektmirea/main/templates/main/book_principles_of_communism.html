@@ -1,28 +1,6 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'main/css/main_styles.css' %}">
-    </head>
-<body> 
-  <div class="navbar">
-    {% block content %}
-      <a href="{% url 'home' %}">Главная</a>
-    <div class="dropdown">
-      <button class="dropbtn"> Книги 
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="{% url 'k_mar' %}">Карл Маркс</a>
-        <a href="{% url 'f_eng' %}">Фридрих Энгельс</a>
-        <a href="{% url 'i_len' %}">Ильич Ленин</a>
-      </div>
-    </div> 
-      <a style = "float: right" href="#" class="right">Войти</a> 
-      {% endblock %}
-  </div>
+{% extends 'main/index.html' %}
     {% block title %}Принципы коммунизма{% endblock %}
+    {% block content %}
         <div class = "maintext">
           <p class = "headingmaintext"><strong>1-й вопрос: </strong>Что такое коммунизм?<br></p>
           <strong><br>Ответ:</strong> Коммунизм есть учение об условиях освобождения 
@@ -695,8 +673,4 @@
           для борьбы между буржуа и пролетариями. С этого дня партийная политика 
           коммунистов будет здесь такой же, как и в странах, где буржуазия уже 
           господствует. </div><br>
-          <footer>
-            <p>Создано командой Gref</p>
-          </footer>
-</body>
-</html>
+          {% endblock %}

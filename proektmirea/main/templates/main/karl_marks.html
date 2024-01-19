@@ -2,7 +2,8 @@
   {% block img %}{% endblock %}
     {% block title %}Карл Генрих Маркс{% endblock %}
     {% block content %}
-    <div class = "maintext"><img src="image/marks.png" class="leftimg">
+    {% load static %}
+    <div class = "maintext"><img src="{% static 'main/img/marks.png' %}" class="leftimg">
       Немецкий философ, экономист, политический журналист, историк.<br>
       Маркс доказывал, что человеческое общество на каждом из этапов 
       развивается в результате классовой борьбы, 
@@ -13,6 +14,6 @@
     </div>
     <h1 class="works">Основные сочинения</h1>
     <ul class="list2b">
-      <li><a href="book_principles_of_communism.html">"Принципы коммунизма"</a></li>
+      <li><a href="{%url 'books_kar_m'%}">"Принципы коммунизма"</a></li>
     </ul>
 {% endblock %}

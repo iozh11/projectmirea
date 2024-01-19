@@ -1,8 +1,9 @@
 {% extends 'main/index.html' %}
+{% load static %}
   {% block img %}{% endblock %}
     {% block title %}Фридрих Энгельс{% endblock %}
     {% block content %}
-    <div class = "maintext"><img src="image/engels.jpg" class="leftimg">
+    <div class = "maintext"><img src="{% static 'main/img/engels.jpg' %}" class="leftimg">
       Немецкий философ, политический теоретик.
       Энгельс был ключевой фигурой в развитии социализма и коммунизма. 
       В его трудах изложено видение общества, возглавляемого рабочими, 
@@ -15,6 +16,6 @@
     </div>
     <h1 class="works">Основные сочинения</h1>
     <ul class="list2b">
-      <li><a href="book_development_socialism_from_utopia_to_science.html">"Развитие социализма от утопии к науке"</a></li>
+      <li><a href="{%url 'books_fri_e'%}">"Развитие социализма от утопии к науке"</a></li>
     </ul>
-{% endblock %}
+    {% endblock content %}

@@ -12,3 +12,6 @@ def karl_marks(request):
 
 def ilych_lenin(request):
     return render(request, 'main/ilych_lenin.html')
+
+
+
